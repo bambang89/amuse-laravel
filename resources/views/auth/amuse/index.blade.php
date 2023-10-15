@@ -16,26 +16,26 @@
 	<title>AMUSE - Aesthetic Medicine Updates Seminar and Exhibition</title>
 
 	<!--Favicon-->
-	<link rel="shortcut icon"  href="{{ asset('amuse/images/logoamuse/amuse_logo.png') }}" type="image/x-icon">
-	<link rel="icon" href="{{ asset('images/logoamuse/amuse_logo.png') }}" type="image/x-icon">
+	<link rel="shortcut icon"  href="{{ asset('/public/amuse/images/logoamuse/amuse_logo.png') }}" type="image/x-icon">
+	<link rel="icon" href="{{ asset('/public/images/logoamuse/amuse_logo.png') }}" type="image/x-icon">
 	
 	<!-- CSS
 	================================================== -->
 	
 	<!-- Bootstrap -->
-	<link rel="stylesheet" href="{{ asset('amuse/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('/public/amuse/css/bootstrap.min.css') }}">
 	<!-- Template styles-->
-	<link rel="stylesheet" href="{{ asset('amuse/css/style01.css') }}">
+	<link rel="stylesheet" href="{{ asset('/public/amuse/css/style01.css') }}">
 	<!-- Responsive styles-->
-	<link rel="stylesheet" href="{{ asset('amuse/css/responsive.css') }}">
+	<link rel="stylesheet" href="{{ asset('/public/amuse/css/responsive.css') }}">
 	<!-- FontAwesome -->
-	<link rel="stylesheet" href="{{ asset('amuse/css/font-awesome.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('/public/amuse/css/font-awesome.min.css') }}">
 	<!-- Animation -->
-	<link rel="stylesheet" href="{{ asset('amuse/css/animate.css') }}">
+	<link rel="stylesheet" href="{{ asset('/public/amuse/css/animate.css') }}">
 	<!-- Colorbox -->
-	<link rel="stylesheet" href="{{ asset('amuse/css/colorbox.css') }}">
-	<link rel="stylesheet" href="{{ asset('amuse/css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('amuse/css/owl.theme.default.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('/public/amuse/css/colorbox.css') }}">
+	<link rel="stylesheet" href="{{ asset('/public/amuse/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/public/amuse/css/owl.theme.default.min.css') }}">
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -48,7 +48,7 @@
     .banner-item { 
         width: 100%; 
         height: 600px; 
-        background-image: url("{{asset('amuse/image/background-image.jpg')}}"); 
+        background-image: url("{{asset('/public/amuse/image/background-image.jpg')}}"); 
         background-size: 100% 100%;  
         background-repeat: no-repeat;
     } 
@@ -72,7 +72,7 @@
 				<div class="navbar-header">
 					<div class="logo">
 	                <a href="{{ route('main') }}">
-	                	<img src="{{url('/amuse/images/logoamuse/amuse_logo_rev.png') }}" alt="" height="100" width="200">
+	                	<img src="{{url('/public/amuse/images/logoamuse/amuse_logo_rev.png') }}" alt="" height="100" width="200">
 	                </a>
          		</div><!-- logo end -->
 				</div><!-- Navbar header end -->
@@ -115,7 +115,7 @@
 	<section id="banner">
 		<!-- <div class="banner-item bg-overlay gradient-bg" style="background-image:url(images/hero-area/BG.png)"> -->
 		<!-- <div class="banner-item bg-overlay" style="background-image:url(images/hero-area/BG.png)"> -->
-		<?php $banneImg = $banner ? asset('img/banner/'.$banner->img) : asset('amuse/images/hero-area/BG.png')?>
+		<?php $banneImg = $banner ? asset('/public/img/banner/'.$banner->img) : asset('/public/amuse/images/hero-area/BG.png')?>
 		<div class="banner-item" style="background-image: url('{{ $banneImg }}')">
 			<div class="container">
 				<div class="banner-content text-center">
@@ -151,7 +151,7 @@
 				<div class="col-sm-3 col-xs-6">
 					<div class="ts-facts">
 						<span class="ts-facts-img">
-							<img src="{{url('/amuse/images/icons/fact-workshop.png') }}" alt="" />
+							<img src="{{url('/public/amuse/images/icons/fact-workshop.png') }}" alt="" />
 						</span>
 						<div class="ts-facts-content">
 							<h2 class="ts-facts-num"><span class="counterUp">3</span></h2>
@@ -163,7 +163,7 @@
 				<div class="col-sm-3 col-xs-6">
 					<div class="ts-facts">
 						<span class="ts-facts-img">
-							<img src="{{url('/amuse/images/icons/fact-speaker.png') }}" alt="" />
+							<img src="{{url('/public/amuse/images/icons/fact-speaker.png') }}" alt="" />
 						</span>
 						<div class="ts-facts-content">
 							<h2 class="ts-facts-num"><span class="counterUp">25</span></h2>
@@ -175,7 +175,7 @@
 				<div class="col-sm-3 col-xs-6">
 					<div class="ts-facts">
 						<span class="ts-facts-img">
-							<img src="{{url('/amuse/images/icons/fact-sponsor.png') }}" alt="" />
+							<img src="{{url('/public/amuse/images/icons/fact-sponsor.png') }}" alt="" />
 						</span>
 						<div class="ts-facts-content">
 							<h2 class="ts-facts-num"><span class="counterUp">40</span></h2>
@@ -187,7 +187,7 @@
 				<div class="col-sm-3 col-xs-6">
 					<div class="ts-facts last">
 						<span class="ts-facts-img">
-							<img src="{{url('/amuse/images/icons/light.png') }}" alt="" />
+							<img src="{{url('/public/amuse/images/icons/light.png') }}" alt="" />
 						</span>
 						<div class="ts-facts-content">
 							<h2 class="ts-facts-num"><span class="counterUp">43</span></h2>
@@ -244,7 +244,7 @@
 					<div class="col-xs-12 col-md-4">
 						<div class="ts-speaker-details">
 							<div class="ts-speaker-details-img">
-								<img class="img-responsive" src="{{url('/amuse/images/logoamuse/amuse_logo.png') }}" alt="" />
+								<img class="img-responsive" src="{{url('/public/amuse/images/logoamuse/amuse_logo.png') }}" alt="" />
 								<ul class="ts-speaker-details-social">
 									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -316,7 +316,7 @@
 			    <div class="col-xs-12 col-sm-6 col-md-3">
 					<div class="ts-speaker">
 						<div class="ts-speaker-image">
-							<img class="img-responsive" src='{{url("img/speaker/".$speaker->img)}}' alt="" />
+							<img class="img-responsive" src='{{url("/public/img/speaker/".$speaker->img)}}' alt="" />
 							<ul class="social-links">
 								<li><a href="#"><i class="fa fa-instagram"></i></a></li>
 								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
@@ -353,7 +353,7 @@
         <div class="row g-2 g-md-4">
 			@foreach($bannerChilds as $bannerChild)
 				<div class="col-6 col-md-6">
-					<img class="event" src='{{url("img/banner/".$bannerChild->img)}}' alt="" class="mg-fluid" /> 
+					<img class="event" src='{{url("/public/img/banner/".$bannerChild->img)}}' alt="" class="mg-fluid" /> 
 				</div>
 			@endforeach
 		</div>
@@ -434,7 +434,7 @@
 					</div><!-- Footer menu end -->
 
 					<div class="footer-logo">
-						<img  src="{{url('/amuse/images/logoamuse/amuse_logo.png') }}" alt="footer logo" height="150" width="250"/>
+						<img  src="{{url('/public/amuse/images/logoamuse/amuse_logo.png') }}" alt="footer logo" height="150" width="250"/>
 					</div>
 
 
@@ -470,28 +470,28 @@
 	================================================== -->
 
 	<!-- initialize jQuery Library -->
-	<script type="text/javascript" src="{{ asset('amuse/js/jquery.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('/public/amuse/js/jquery.js') }}"></script>
 	<!-- Bootstrap jQuery -->
-	<script type="text/javascript" src="{{ asset('amuse/js/bootstrap.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('/public/amuse/js/bootstrap.min.js') }}"></script>
 	<!-- Counter -->
-	<script type="text/javascript" src="{{ asset('amuse/js/jquery.counterup.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('/public/amuse/js/jquery.counterup.min.js') }}"></script>
 	<!-- Countdown -->
-	<script type="text/javascript" src="{{ asset('amuse/js/jquery.jCounter.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('/public/amuse/js/jquery.jCounter.js') }}"></script>
 	<!-- Waypoints -->
-	<script type="text/javascript" src="{{ asset('amuse/js/waypoints.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('/public/amuse/js/waypoints.min.js') }}"></script>
 	<!-- Color box for Popup-->
-	<script type="text/javascript" src="{{ asset('amuse/js/jquery.colorbox.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('/public/amuse/js/jquery.colorbox.js') }}"></script>
 	<!-- Smoothscroll -->
-	<script type="text/javascript" src="{{ asset('amuse/js/smoothscroll.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('/public/amuse/js/smoothscroll.js') }}"></script>
 	<!-- Google Map API Key-->
 	<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCsa2Mi2HqyEcEnM1urFSIGEpvualYjwwM"></script>
 	<!-- Google Map Plugin-->
-	<script type="text/javascript" src="{{ asset('amuse/js/gmap3.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('/public/amuse/js/gmap3.js') }}"></script>
 	<!-- Template custom -->
-	<script type="text/javascript" src="{{ asset('amuse/js/custom.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('/public/amuse/js/custom.js') }}"></script>
 	<!-- owc carousel -->
-    <script src="{{ asset('amuse/js/owl.carousel.js') }}" ></script>
-    <script src="{{ asset('amuse/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('/public/amuse/js/owl.carousel.js') }}" ></script>
+    <script src="{{ asset('/public/amuse/js/owl.carousel.min.js') }}"></script>
 	
 	</div><!-- Body inner end -->
 	<script>

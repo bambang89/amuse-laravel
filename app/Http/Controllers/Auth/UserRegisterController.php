@@ -25,7 +25,10 @@ class UserRegisterController extends Controller
         $data['proof_img'] = $filename;
         $res = UserRegister::create($data);
 
-        return redirect()->route('/download',['id'=>$res->id]);
+        // return redirect()->route('download',['id'=> $res->id]);
+        return redirect()->action(
+            'Auth\UserRegisterController@download', ['id'=> $res->id]
+        );
     }
 
     public function example()
@@ -38,12 +41,12 @@ class UserRegisterController extends Controller
         $response = UserRegister::where('id',$id)->first();
 
         $pdf = Pdf::loadView('pdf.index', compact('response'));
-        $pdf->download('invoice.pdf');
+        return $pdf->download('invoice.pdf');
 
         // $pdf = Pdf::loadview('pdf.index',compact('response'));
         // return $pdf->stream();
         // return $pdf->download('register.pdf');
-        return redirect('/');
+        // return redirect('/');
 
         // return view('pdf.index',compact('response'));
     }

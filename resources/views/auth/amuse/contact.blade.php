@@ -16,24 +16,24 @@
 	<title>AMUSE - Aesthetic Medicine Updates Seminar and Exhibition</title>
 
 	<!--Favicon-->
-	<link rel="shortcut icon"  href="{{ asset('amuse/images/logoamuse/amuse_logo.png') }}" type="image/x-icon">
-	<link rel="icon" href="{{ asset('images/logoamuse/amuse_logo.png') }}" type="image/x-icon">
+	<link rel="shortcut icon"  href="{{ asset('/public/amuse/images/logoamuse/amuse_logo.png') }}" type="image/x-icon">
+	<link rel="icon" href="{{ asset('/public/images/logoamuse/amuse_logo.png') }}" type="image/x-icon">
 	
 	<!-- CSS
 	================================================== -->
 	
 	<!-- Bootstrap -->
-	<link rel="stylesheet" href="{{ asset('amuse/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('/public/amuse/css/bootstrap.min.css') }}">
 	<!-- Template styles-->
-	<link rel="stylesheet" href="{{ asset('amuse/css/style01.css') }}">
+	<link rel="stylesheet" href="{{ asset('/public/amuse/css/style01.css') }}">
 	<!-- Responsive styles-->
-	<link rel="stylesheet" href="{{ asset('amuse/css/responsive.css') }}">
+	<link rel="stylesheet" href="{{ asset('/public/amuse/css/responsive.css') }}">
 	<!-- FontAwesome -->
-	<link rel="stylesheet" href="{{ asset('amuse/css/font-awesome.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('/public/amuse/css/font-awesome.min.css') }}">
 	<!-- Animation -->
-	<link rel="stylesheet" href="{{ asset('amuse/css/animate.css') }}">
+	<link rel="stylesheet" href="{{ asset('/public/amuse/css/animate.css') }}">
 	<!-- Colorbox -->
-	<link rel="stylesheet" href="{{ asset('amuse/css/colorbox.css') }}">
+	<link rel="stylesheet" href="{{ asset('/public/amuse/css/colorbox.css') }}">
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -55,7 +55,7 @@
 				<div class="navbar-header">
 					<div class="logo">
 	                <a href="{{ route('main') }}">
-                    <img src="{{url('/amuse/images/logoamuse/amuse_logo_rev.png') }}" alt="" height="100" width="200">
+                    <img src="{{url('/public/amuse/images/logoamuse/amuse_logo_rev.png') }}" alt="" height="100" width="200">
 	                </a>
          		</div><!-- logo end -->
 				</div><!-- Navbar header end -->
@@ -95,7 +95,7 @@
 		</div><!--/ Container end -->
 	</header><!--/ Header end -->
 	
-	<div id="page-banner-area" class="page-banner-area" style="background-image: url('{{asset('amuse/images/logoamuse/contuctbg.png')}}')">
+	<div id="page-banner-area" class="page-banner-area" style="background-image: url('{{asset('/public/amuse/images/logoamuse/contuctbg.png')}}')">
 		<!-- Subpage title start -->
 		<div class="page-banner-title">
         	<div class="text-center">
@@ -203,7 +203,7 @@
 					</div><!-- Footer menu end -->
 
 					<div class="footer-logo">
-						<img src="{{url('/amuse/images/logoamuse/amuse_logo.png') }}" alt="footer logo" height="150" width="250"/>
+						<img src="{{url('/public/amuse/images/logoamuse/amuse_logo.png') }}" alt="footer logo" height="150" width="250"/>
 					</div>
 
 
@@ -239,23 +239,23 @@
 	================================================== -->
 
 	<!-- initialize jQuery Library -->
-	<script type="text/javascript" src="{{ asset('amuse/js/jquery.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('/public/amuse/js/jquery.js') }}"></script>
 	<!-- Bootstrap jQuery -->
-	<script type="text/javascript" src="{{ asset('amuse/js/bootstrap.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('/public/amuse/js/bootstrap.min.js') }}"></script>
 	<!-- Counter -->
-	<script type="text/javascript" src="{{ asset('amuse/js/jquery.counterup.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('/public/amuse/js/jquery.counterup.min.js') }}"></script>
 	<!-- Waypoints -->
-	<script type="text/javascript" src="{{ asset('amuse/js/waypoints.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('/public/amuse/js/waypoints.min.js') }}"></script>
 	<!-- Color box for Popup-->
-	<script type="text/javascript" src="{{ asset('amuse/js/jquery.colorbox.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('/public/amuse/js/jquery.colorbox.js') }}"></script>
 	<!-- Smoothscroll -->
-	<script type="text/javascript" src="{{ asset('amuse/js/smoothscroll.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('/public/amuse/js/smoothscroll.js') }}"></script>
 	<!-- Template custom -->
-	<script type="text/javascript" src="{{ asset('amuse/js/custom.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('/public/amuse/js/custom.js') }}"></script>
 	<!-- Google Map API Key-->
 	<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCsa2Mi2HqyEcEnM1urFSIGEpvualYjwwM"></script>
 	<!-- Google Map Plugin-->
-	<script type="text/javascript" src="{{ asset('amuse/js/gmap3.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('/public/amuse/js/gmap3.js') }}"></script>
 	
 	</div><!-- Body inner end -->
 </body>

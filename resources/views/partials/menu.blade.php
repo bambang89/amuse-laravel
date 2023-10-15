@@ -1,8 +1,8 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4" style="min-height: 917px; background-color: #445799;">
     <!-- Brand Logo -->
     <a href="{{ route("admin.home") }}" class="brand-link logo-switch">
-        <!-- <img src={{url('/img/icon/AdminLTELogo.png')}} alt="AdminLTE Docs Logo Small" class="brand-image-xl logo-xs"> -->
-        <img src={{url('/img/amuse_logo.png')}} width="200" height="" alt=""/>
+        <!-- <img src={{url('/public/img/icon/AdminLTELogo.png')}} alt="AdminLTE Docs Logo Small" class="brand-image-xl logo-xs"> -->
+        <img src={{url('/public/img/amuse_logo.png')}} width="200" height="" alt=""/>
         <!-- <span class="brand-text font-weight-light">AMUSE</span> -->
     </a>
 
@@ -74,7 +74,7 @@
                 @endcan
 
                 @can('user_management_access')
-                    <li class="nav-item has-treeview {{ request()->is('admin/banner*') ? 'menu-open' : '' }} {{ request()->is('admin/speaker*') ? 'menu-open' : '' }} {{ request()->is('admin/about*') ? 'menu-open' : '' }}">
+                    <li class="nav-item has-treeview {{ request()->is('admin/banner*') ? 'menu-open' : '' }} {{ request()->is('admin/speaker*') ? 'menu-open' : '' }} {{ request()->is('admin/about*') ? 'menu-open' : '' }} {{ request()->is('admin/member*') ? 'menu-open' : '' }}">
                         <a class="nav-link nav-dropdown-toggle">
                             <i class="nav-icon fas fa-cogs"></i>
                             <p>
@@ -107,14 +107,29 @@
                                     </p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ route("admin.member.index") }}" class="nav-link {{ request()->is('admin/member') || request()->is('admin/member/*') ? 'active' : '' }}">
+                                    <p style="margin-left: 20px;">
+                                        <i class="nav-icon fas fa-user"></i>
+                                        <span>Member List</span>
+                                    </p>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 @endcan
                 <li class="nav-item ">
-                    <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
+                    <!-- <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
+                        <i class="nav-icon fas fa-sign-out-alt"></i>
+                        <p>{{ trans('global.logout') }}</p>
+                    </a> -->
+                    <a href="#" href="{{ url('/logout') }}" class="nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                         <i class="nav-icon fas fa-sign-out-alt"></i>
                         <p>{{ trans('global.logout') }}</p>
                     </a>
+                    <form id="logout-form" action="{{ url('/logout') }}" method="get" style="display: none;">
+                        @csrf
+                    </form>
                 </li>
             </ul>
         </nav>

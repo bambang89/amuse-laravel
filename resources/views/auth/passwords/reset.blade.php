@@ -3,7 +3,7 @@
 <div class="login-box">
     <div class="login-logo">
         <div class="login-logo">
-            <img src={{url('/img/amuse_logo_biru.png')}} width="300" height="" alt=""/>
+            <img src={{url('/public/img/amuse_logo_biru.png')}} width="300" height="" alt=""/>
             <!-- <a href="#">
                 {{ trans('global.site_title') }}
             </a> -->

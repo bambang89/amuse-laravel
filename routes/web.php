@@ -10,34 +10,38 @@ Route::get('/', function () {
 Route::get('/', 'Auth\MainController@index')->name('main');
 
 
-Route::get('logout', 'Auth\LoginController@logout')->name('logout');
+Route::get('logout', function () {
+    auth()->logout();
+    // redirect to homepage
+    return redirect('/');
+})->name('logout');
 
-Route::redirect('/home', '/admin');
+Route::get('registernow', 'Auth\UserRegisterController@index')->name('registernow');
+    
+Route::post('storeregister', 'Auth\UserRegisterController@store')->name('storeregister');
 
+Route::get('example', 'Auth\UserRegisterController@example')->name('example');
+
+Route::get('download/{id}', 'Auth\UserRegisterController@download')->name('download');
+// Route::get('/main', 'Auth\MainController@index')->name('main');
+
+Route::get('/about', 'Auth\MainController@about')->name('about');
+
+Route::get('/speaker', 'Auth\MainController@speaker')->name('speaker');
+
+Route::get('/contact', 'Auth\MainController@contact')->name('contact');
+
+Route::redirect('/home', 'myadmin/admin');
+// Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 // Route::get('/', 'Auth\MainController@index')->name('main');
 
 Route::middleware(['guest'])->group(function () {    
     Auth::routes(['register' => false]);
-    
-    Route::get('registernow', 'Auth\UserRegisterController@index')->name('registernow');
-    
-    Route::post('storeregister', 'Auth\UserRegisterController@store')->name('storeregister');
-    
-    Route::get('example', 'Auth\UserRegisterController@example')->name('example');
-    
-    Route::get('/download/{id}', 'Auth\UserRegisterController@download');
-    // Route::get('/main', 'Auth\MainController@index')->name('main');
-
-    Route::get('/about', 'Auth\MainController@about')->name('about');
-
-    Route::get('/speaker', 'Auth\MainController@speaker')->name('speaker');
-
-    Route::get('/contact', 'Auth\MainController@contact')->name('contact');
 });
 
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
+Route::group(['prefix' => '/admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');
 
     Route::delete('permissions/destroy', 'PermissionsController@massDestroy')->name('permissions.massDestroy');
@@ -67,4 +71,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('speaker/destroy', 'SpeakerController@massDestroy')->name('speaker.massDestroy');
 
     Route::resource('speaker', 'SpeakerController');
+
+    Route::resource('member', 'MemberRegisterController');
 });
