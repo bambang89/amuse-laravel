@@ -134,8 +134,8 @@
 							<br/>
 						<p class="banner-btn">
 							
-							<a href="{{ route('/register') }}" class="btn btn-primary">Register Congress</a>
-							<a href="{{ route('/register') }}" class="btn btn-primary">Register Webinar</a>
+							<a href="{{ route('registernow') }}" class="btn btn-primary">Register Congress</a>
+							<a href="{{ route('registernow') }}" class="btn btn-primary">Register Webinar</a>
 						</p>
 						
 					</div>

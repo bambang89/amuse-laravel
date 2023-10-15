@@ -82,7 +82,7 @@
 			<div class="row">
 				<div class="navbar-header">
 					<div class="logo">
-	                <a href="index.php">
+	                <a href="{{ route('main') }}">
 	                	<img src="{{url('/amuse/images/logoamuse/amuse_logo_rev.png') }}" alt="" height="100" width="200">
 	                </a>
          		</div><!-- logo end -->
@@ -98,8 +98,8 @@
 
 	    			<nav class="collapse navbar-collapse navbar-responsive-collapse pull-right">
 	    				<ul class="nav navbar-nav">
-						<li class="active"><a href="index.php">Home</a></li>
-						<li><a href="aboutus.php">About Us</a></li>
+						<li class="active"><a href="{{ route('main') }}">Home</a></li>
+						<li><a href="{{ route('about') }}">About Us</a></li>
 						<li class="dropdown">
 		                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event<i class="fa fa-angle-down"></i></a>
 								<ul class="dropdown-menu menu-center" role="menu">
@@ -108,8 +108,8 @@
 		                  </ul>
 		             
 						<li><a href="exhibitor.php">Exhibitor</a></li>
-						<li><a href="speakers-grid.php">Speakers</a></li>
-					<li><a href="contact.php">Contact us</a></li>
+						<li><a href="{{ route('speaker') }}">Speakers</a></li>
+					<li><a href="{{ route('contact') }}">Contact us</a></li>
 					<li><a href="faq.php">FAQ</a></li>
 
 		            
@@ -124,7 +124,7 @@
 		</div><!--/ Container end -->
 	</header><!--/ Header end -->
 	
-	<div id="page-banner-area" class="page-banner-area" style="background-image:{{url('/amuse/images/logoamuse/contuctbg.png')}}">
+	<div id="page-banner-area" class="page-banner-area" style="background-image: url('{{asset('amuse/images/logoamuse/contuctbg.png')}}')">
 		<div class="page-banner-title">
         	<div class="text-center">
 	        	<h2>Register Now</h2>
@@ -140,7 +140,7 @@
 
 				<div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
 	    			<h3>Register Now</h3>
-	    			<form id="contact-form" autocomplete="off" class="contact-form" action="{{ route('register.store') }}" method="POST" enctype="multipart/form-data">
+	    			<form autocomplete="off" class="contact-form" action="{{ route('storeregister') }}" method="POST" enctype="multipart/form-data">
 						@csrf
 	    					<div class="error-container"></div>
 							<div class="row">
@@ -222,16 +222,16 @@
 
 					<div class="footer-menu">
 						<ul class="nav unstyled">
-							<li><a href="index.php">Home</a></li>
-							<li><a href="aboutus.php">About Us</a></li>
+							<li><a href="{{ route('main') }}">Home</a></li>
+							<li><a href="{{ route('about') }}">About Us</a></li>
 							<li><a href="exhibitor.php">Exhibitor</a></li>
 							<li><a href="#">Speakers</a></li>
-							<li><a href="Contact.php">Contact Us</a></li>
+							<li><a href="{{ route('contact') }}">Contact Us</a></li>
 						</ul>
 					</div><!-- Footer menu end -->
 
 					<div class="footer-logo">
-						<img src="images/logoamuse/amuse_logo.png" alt="footer logo" height="150" width="250"/>
+						<img src="{{url('/amuse/images/logoamuse/amuse_logo.png') }}" alt="footer logo" height="150" width="250"/>
 					</div>
 
 
@@ -260,7 +260,7 @@
 		<!--	</button>-->
 		<!--</div>-->
 		<a  class="whats-app" href="https://wa.me/+6281110011834" target="_blank">
-            <img src="images/icons/wa.png" width="60px" height="60px" />
+            <img src="{{url('images/icons/wa.png') }}" width="60px" height="60px" />
         </a>
 
 	</footer><!-- Footer end -->

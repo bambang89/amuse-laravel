@@ -9,19 +9,25 @@ Route::get('/', function () {
 
 Route::get('/', 'Auth\MainController@index')->name('main');
 
-Route::post('/register', 'Auth\UserRegisterController@index');
 
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::redirect('/home', '/admin');
 
+
 // Route::get('/', 'Auth\MainController@index')->name('main');
 
 Route::middleware(['guest'])->group(function () {    
     Auth::routes(['register' => false]);
-
+    
+    Route::get('registernow', 'Auth\UserRegisterController@index')->name('registernow');
+    
+    Route::post('storeregister', 'Auth\UserRegisterController@store')->name('storeregister');
+    
+    Route::get('example', 'Auth\UserRegisterController@example')->name('example');
+    
+    Route::get('/download/{id}', 'Auth\UserRegisterController@download');
     // Route::get('/main', 'Auth\MainController@index')->name('main');
-
 
     Route::get('/about', 'Auth\MainController@about')->name('about');
 

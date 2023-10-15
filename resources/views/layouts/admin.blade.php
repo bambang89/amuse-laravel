@@ -136,14 +136,14 @@
           columns: ':visible'
         }
       },
-      {
-        extend: 'csv',
-        className: 'btn-default',
-        text: csvButtonTrans,
-        exportOptions: {
-          columns: ':visible'
-        }
-      },
+      // {
+      //   extend: 'csv',
+      //   className: 'btn-default',
+      //   text: csvButtonTrans,
+      //   exportOptions: {
+      //     columns: ':visible'
+      //   }
+      // },
       {
         extend: 'excel',
         className: 'btn-default',
@@ -167,14 +167,14 @@
         exportOptions: {
           columns: ':visible'
         }
-      },
-      {
-        extend: 'colvis',
-        className: 'btn-default',
-        text: colvisButtonTrans,
-        exportOptions: {
-          columns: ':visible'
-        }
+      // },
+      // {
+      //   extend: 'colvis',
+      //   className: 'btn-default',
+      //   text: colvisButtonTrans,
+      //   exportOptions: {
+      //     columns: ':visible'
+      //   }
       }
     ]
   });

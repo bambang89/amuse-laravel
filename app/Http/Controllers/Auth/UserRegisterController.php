@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUserRegisterRequest;
 use App\UserRegister;
+// use PDF;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class UserRegisterController extends Controller
 {
@@ -14,17 +16,36 @@ class UserRegisterController extends Controller
         return view('auth.amuse.register');
     }
 
-    public function store(StoreUserRegisterRequest $request)
+    public function store(Request $request)
     {
         $data = $request->all();
-        if($request->file('proof_img')){
-            $file     = $request->file('proof_img');
-            $filename = $file->getClientOriginalName();
-            $file->move('img/proof', $filename);
-            $data['proof_img'] = $filename;
-        }
+        $file     = $request->file('proof_img');
+        $filename = $file->getClientOriginalName();
+        $file->move('img/proof', $filename);
+        $data['proof_img'] = $filename;
+        $res = UserRegister::create($data);
 
-        $banner = UserRegister::create($data);
-        return redirect('/');
+        return redirect()->route('/download',['id'=>$res->id]);
     }
+
+    public function example()
+    {
+        return view('auth.pdf.index');
+    }
+
+    public function download($id)
+    {
+        $response = UserRegister::where('id',$id)->first();
+
+        $pdf = Pdf::loadView('pdf.index', compact('response'));
+        $pdf->download('invoice.pdf');
+
+        // $pdf = Pdf::loadview('pdf.index',compact('response'));
+        // return $pdf->stream();
+        // return $pdf->download('register.pdf');
+        return redirect('/');
+
+        // return view('pdf.index',compact('response'));
+    }
+
 }
