@@ -42,7 +42,7 @@ class SpeakerController extends Controller
         if($request->file('img')){
             $file     = $request->file('img');
             $filename = $file->getClientOriginalName();
-            $file->move('img/speaker', $filename);
+            $file->move('public/img/speaker', $filename);
             $data['img'] = $filename;
         }
 

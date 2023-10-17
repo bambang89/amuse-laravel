@@ -39,6 +39,9 @@
                         <th>
                             Bukti Transfer
                         </th>
+                        <th>
+                            {{ trans('global.banner.fields.action') }}
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -65,6 +68,11 @@
                             </td>
                             <td>
                                 {{ $member->proof_img ?? '' }}
+                            </td>
+                            <td>
+                                <a class="btn btn-xs btn-primary" href="{{ route('download', $member->id) }}">
+                                    Download PDF 
+                                </a>
                             </td>
 
                         </tr>

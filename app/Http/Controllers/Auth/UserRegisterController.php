@@ -21,11 +21,10 @@ class UserRegisterController extends Controller
         $data = $request->all();
         $file     = $request->file('proof_img');
         $filename = $file->getClientOriginalName();
-        $file->move('img/proof', $filename);
+        $file->move('public/img/proof', $filename);
         $data['proof_img'] = $filename;
         $res = UserRegister::create($data);
-
-        // return redirect()->route('download',['id'=> $res->id]);
+        
         return redirect()->action(
             'Auth\UserRegisterController@download', ['id'=> $res->id]
         );

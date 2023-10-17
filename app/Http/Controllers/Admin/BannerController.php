@@ -41,7 +41,7 @@ class BannerController extends Controller
         if($request->file('img')){
             $file     = $request->file('img');
             $filename = $file->getClientOriginalName();
-            $file->move('img/banner', $filename);
+            $file->move('public/img/banner', $filename);
             $data['img'] = $filename;
         }
 

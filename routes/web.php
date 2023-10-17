@@ -31,7 +31,7 @@ Route::get('/speaker', 'Auth\MainController@speaker')->name('speaker');
 
 Route::get('/contact', 'Auth\MainController@contact')->name('contact');
 
-Route::redirect('/home', 'myadmin/admin');
+Route::redirect('/home', 'admin');
 // Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 // Route::get('/', 'Auth\MainController@index')->name('main');
@@ -41,7 +41,7 @@ Route::middleware(['guest'])->group(function () {
 });
 
 
-Route::group(['prefix' => '/admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');
 
     Route::delete('permissions/destroy', 'PermissionsController@massDestroy')->name('permissions.massDestroy');
